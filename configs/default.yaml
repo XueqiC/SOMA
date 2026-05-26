@@ -1,0 +1,57 @@
+# Default SOMA configuration. Override on the command line with --original_model / --surrogate_model.
+# Both fields are intentionally left as null so the script forces an explicit choice.
+
+original_model: null
+surrogate_model: null
+
+warm_window: 4
+compressed_prefix_turns: 2
+max_new_tokens: 200
+acceptance_min_turns: 2
+
+mining:
+  soft_len: 16
+  n_candidates: 3
+  iters: 30
+  lr: 1.0e-3
+  weight_decay: 1.0e-2
+  grad_clip: 1.0
+  neighborhood_k: 32
+  teacher_topm: 100
+  temperature: 0.7
+  lambda_exp: 1.0
+  beta_anti_degen: 0.05
+  lambda_P: 1.0e-4
+  init_std: 0.02
+  scale: 0.25
+  max_prompt_tokens: 768
+  max_teacher_tokens: 96
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  steps: 60
+  batch_size: 2
+  lr: 2.0e-4
+  weight_decay: 1.0e-2
+  grad_clip: 1.0
+  max_seq_length: 1024
+  early_stop_patience: 20
+  early_stop_min_delta: 1.0e-3
+
+gate:
+  accept_threshold: 0.20
+  locality_threshold: 0.35
+  drift_window: 4
+  drift_threshold: 0.30
+  consecutive_to_rollback: 2
+  encoder_max_tokens: 256

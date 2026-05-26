@@ -1,0 +1,43 @@
+# Quick smoke-test config -- tiny budgets, suitable for a single small GPU.
+# Uses two compatible Qwen2.5 instruct models so SOMA can be exercised
+# end-to-end in a few minutes.
+
+original_model: Qwen/Qwen2.5-1.5B-Instruct
+surrogate_model: Qwen/Qwen2.5-0.5B-Instruct
+
+warm_window: 3
+compressed_prefix_turns: 1
+max_new_tokens: 96
+acceptance_min_turns: 2
+
+mining:
+  soft_len: 8
+  n_candidates: 2
+  iters: 10
+  lr: 1.0e-3
+  neighborhood_k: 16
+  teacher_topm: 50
+  temperature: 0.7
+  lambda_exp: 1.0
+  beta_anti_degen: 0.05
+  lambda_P: 1.0e-4
+  scale: 0.25
+  max_prompt_tokens: 512
+  max_teacher_tokens: 64
+
+lora:
+  rank: 4
+  alpha: 8
+  dropout: 0.05
+  steps: 20
+  batch_size: 2
+  lr: 2.0e-4
+  max_seq_length: 768
+  early_stop_patience: 10
+
+gate:
+  accept_threshold: 0.30
+  locality_threshold: 0.40
+  drift_window: 3
+  drift_threshold: 0.35
+  consecutive_to_rollback: 2

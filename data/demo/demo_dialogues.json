@@ -1,0 +1,30 @@
+{
+  "math_seq_1": [
+    "A train leaves Station A at 9:00 traveling east at 60 mph. Another train leaves Station B (240 miles east of A) at 10:00 traveling west at 40 mph. At what time will they meet?",
+    "If both trains had instead departed at 9:00, when would they meet?",
+    "Using your previous answer, how far from Station A would the meeting point be?",
+    "If the eastbound train made a 20-minute stop at 9:30, how would the meeting time change?",
+    "Summarize the three scenarios above in one sentence each."
+  ],
+  "logic_box_1": [
+    "There are two boxes. Box 1 is either full or empty. Box 2 is either full or empty. If Box 1 is full, then Box 2 is empty. If Box 2 is full, then Box 1 is empty. I checked Box 1 and it was full. What can you infer about Box 2?",
+    "Now I add a Box 3. Box 3 is full only if Box 2 is empty. Is Box 3 full or empty?",
+    "What if a new rule is added: at most one box can be full at a time. Does this contradict any of your earlier conclusions?",
+    "Given the rule from the previous turn, list every consistent assignment of (Box 1, Box 2, Box 3).",
+    "Out of the assignments you just listed, which one matches the original premise that Box 1 is full?"
+  ],
+  "negotiation_1": [
+    "I am selling a road bike. Asking $400. You are a buyer. What is your first offer?",
+    "I accept $325 if you also take the helmet. Do we have a deal?",
+    "I changed my mind on the helmet. Does your $325 still stand?",
+    "If I throw in the bike lock instead of the helmet, what would you offer now?",
+    "Summarize the final terms of our deal."
+  ],
+  "coin_chain_1": [
+    "A coin is heads up. Alex flips it. Is it still heads up?",
+    "Then Bob flips it. Is it still heads up?",
+    "Then Carol does not flip it. Is it still heads up?",
+    "Finally, Dan flips it twice in a row. Which side is up now?",
+    "List the side of the coin after each step in order."
+  ]
+}

@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Local environment / IDE files
+.venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+
+# Run artifacts
+out/
+logs/
+checkpoints/
+*.log
+
+# Model + dataset caches
+*.bin
+*.safetensors
+hf_cache/
+.cache/

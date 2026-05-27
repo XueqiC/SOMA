@@ -169,18 +169,6 @@ A few faithful but implementation-pragmatic choices worth flagging:
 
 ---
 
-## Citation
-
-If you use this code, please cite the paper:
-
-```bibtex
-@misc{soma2026,
-  title  = {SOMA: Efficient Multi-turn LLM Serving via Small Language Model},
-  year   = {2026},
-  note   = {Anonymous preprint under review.}
-}
-```
-
 ## License
 
 This repository is released under the MIT License. See `LICENSE` for details.
